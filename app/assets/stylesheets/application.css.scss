@@ -1,0 +1,148 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require bootstrap
+ *= require font-awesome
+ *= require program
+ */
+
+
+
+@media only screen and (max-width: 400px) {
+	.main-title {
+		font-size: 20px;
+		color: #e3330a;
+		text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+	}
+}
+
+@font-face {
+  font-family: orbitron-l;
+	src: url('orbitron-light.otf');
+}
+
+@font-face {
+	font-family: gruppo;
+	src: url('Gruppo-Regular.ttf')
+}
+
+
+body {
+	background-image: url('galaxy_1.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+}
+
+.container {
+	position: relative;
+}
+
+.hero-unit.maincontainer {
+	margin-top: 50px;
+	height: 550px;
+	background-color: rgba(238,238,238,0.5);
+	border-radius: 20px;
+	border-style:solid;
+	border-width: 5px;
+	border-color: #6b6b6b;
+}
+
+.btn-dashboard{
+	height: 55px;
+	font-size: 25px !important;
+	font-family: gruppo;
+}
+
+.btn-dashboard.first{
+		margin-top: 20px;
+}
+
+.btn-dashboard.second{
+		margin-top: 70px;
+}
+
+.btn-dashboard.third{
+		margin-top: 200px;
+}
+
+.font-center{
+	font-family: gruppo;
+	text-align: center;
+	color: black !important;
+}
+
+.font {
+	font-family: gruppo;
+}
+
+.user_name_field {
+	margin-top: 70px;
+	height:70px !important;
+	font-size: 50px !important;
+	width: 350px;
+}
+
+.create_user_button{
+	margin-top: 120px;
+	width: 365px !important;
+	font-family: gruppo;
+}
+
+.btn-back-large{
+	width: 305px !important;
+	font-family: gruppo;
+}
+
+.tooltip-inner {
+	width: 150px;
+	height: 50px;
+	font-size: 20px;
+}
+
+table.programs {
+	font-family: gruppo;
+	color: black;
+	.name {
+		width: 520px;
+	}
+	.action1 {
+		width: 129px;
+	}
+	.action2 {
+		width: 98px;
+	}
+}
+
+.black_font{
+	color: black !important;
+}
+
+.back-btn {
+	position: absolute;
+	bottom: 65px;
+	right: 50px;
+}
+
+.back-btn-extended {
+	position: absolute;
+	bottom: 65px;
+	right: 45px;
+
+	.back-btn2 {
+		padding-right: 25px;
+	}
+
+	.play-track-btn {
+		padding-right: 25px;
+	}
+}

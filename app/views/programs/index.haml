@@ -1,0 +1,23 @@
+
+%h1.font.black_font
+	Zvol program:
+
+%table.table.programs
+	%thead
+		%tr
+			%th.name
+			%th.action1
+			%th.action2
+
+	%tbody
+		-@programs.each do |program|
+			%tr
+				%td.name
+					%h2
+						= program.name
+				%td.action1
+					.btn.btn-success.btn-xlarge Zacat
+				%td.action2
+					= link_to "Info", info_program_path(program), :class => "btn btn-primary btn-xlarge"
+
+= render :partial => "common/back"

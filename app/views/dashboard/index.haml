@@ -1,0 +1,15 @@
+.row-fluid
+	.span4.offset4
+		= link_to new_user_path, :class => "btn btn-xlarge btn-primary btn-block btn-dashboard first" do
+			%i.icon-rocket.icon-white
+			Nový Užívatel
+
+
+.row-fluid
+	.span4.offset4
+		= link_to "Pokračovat v misi", search_users_path, :class => "btn btn-xlarge btn-primary btn-block btn-dashboard second"
+
+
+.row-fluid
+	.span6.offset3
+		= link_to "Informace o mém programu", info_users_path, :class => "btn btn-xlarge btn-primary btn-block btn-dashboard third"

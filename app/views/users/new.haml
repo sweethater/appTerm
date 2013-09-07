@@ -1,0 +1,15 @@
+.row-fluid
+	.span6.offset3
+		%center
+			%h1.font-center
+				Zvol si jméno:
+
+	.span6.offset3
+		= form_for @user do |u|
+			.name.control-group
+				= u.text_field :name, :class => "user_name_field name_tooltip", :autocomplete => "off"
+			.submit.control-group
+				= u.submit "Vytvor uživatele",:class => "btn btn-success btn-xlarge create_user_button"
+
+	.span6.offset3
+		= link_to "Spátky", root_path, :class => "btn btn-xlarge btn-warning btn-back-large"
