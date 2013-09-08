@@ -11,5 +11,5 @@
 						%i.icon-volume-up.icon-white.icon-large
 
 				%td.ok-btn
-					= link_to "OK", :back, :class => "btn btn-success btn-xlarge"
+					= link_to "OK", task_user_program_path(@user.id, @program.id), :class => "btn btn-success btn-xlarge"
 

@@ -1,0 +1,10 @@
+%h3.font.black_font.header
+	= "1. úkol z #{@tasks_count}."
+%h1.font.black_font
+	= @program.name
+
+.program-info-container
+	%h3.font.black_font
+		= @program.program_task
+
+= render :partial => "common/ok"

@@ -8,16 +8,27 @@ Terminal::Application.routes.draw do
 
   resources :users do
     #match 'user/find' => 'users#find', :on => :member
+
     get 'search', :on => :collection
     get 'find', :on => :collection
     get 'info', :on => :collection
     get 'show_info', :on => :collection
+
+    resources :programs do
+      get 'task', :on => :member
+      get 'info', :on => :member
+      get 'begin_program', :on => :member
+      get 'user_info', :on => :member
+    end
   end
 
   resources :programs do
     get 'info', :on => :member
-  end
 
+    resources :tasks do
+
+    end
+  end
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase

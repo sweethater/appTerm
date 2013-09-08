@@ -1,9 +1,23 @@
 class User < ActiveRecord::Base
-  attr_accessible :answers, :name
+  attr_accessible :answers, :name, :program_id
 
   belongs_to :program
 
   validates :name, :presence => true, :length => { :minimum => 2, :maximum => 8}
-  validates_uniqueness_of :name, :case_sensitive => false
+  validates_uniqueness_of :name#, :scope => :program_id, :case_sensitive => false
+
+
+  def self.scope_search(user_name)
+      user_programs = []
+      programs = Program.all
+      programs.each do |program|
+        program.users.each do |u|
+          if u == user_name
+            @user_programs << program
+          end
+        end
+      end
+      user_programs
+  end
 
 end

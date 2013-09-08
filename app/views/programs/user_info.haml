@@ -1,0 +1,29 @@
+%h1.font.black_font
+	Informace o mém programu
+
+%table.table.user_info_table
+
+	%tbody
+		- @program_tasks.each do |task|
+			%tr
+				%td.name
+					%h3
+						= task.name
+				%td.action1
+					%h3.font.black_font
+						= link_to "Znovu?", :back, :class => "btn btn-large"
+
+				%td.action2
+					%i.icon-ok.icon-2x
+
+				%td.action3
+					%h3.font.black_font
+						= link_to "Zopakovat otázku", :back, :class => "btn btn-info btn-large"
+
+.back_and_remove
+	.back
+		= link_to :back, :class => 'btn btn-warning btn-xlarge' do
+			Zpět
+	.remove
+		= link_to :back, :class => 'btn btn-danger btn-xlarge' do
+			Zmazat program

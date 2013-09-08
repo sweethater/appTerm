@@ -16,8 +16,11 @@
 					%h2
 						= program.name
 				%td.action1
-					.btn.btn-success.btn-xlarge Zacat
+					- if @user.program_status
+						= link_to "Dále", task_user_program_path(@user.id, program.id), :class => "btn btn-danger btn-xlarge"
+					- else
+						= link_to "Začít", begin_program_user_program_path(@user.id, program.id), :class => "btn btn-success btn-xlarge"
 				%td.action2
-					= link_to "Info", info_program_path(program), :class => "btn btn-primary btn-xlarge"
+					= link_to "Info", info_user_program_path(@user.id, program), :class => "btn btn-primary btn-xlarge"
 
 = render :partial => "common/back"

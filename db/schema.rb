@@ -11,6 +11,50 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20130907174215) do
+
+  create_table "answers", :force => true do |t|
+    t.text     "answer_text"
+    t.integer  "question_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "programs", :force => true do |t|
+    t.string   "name"
+    t.text     "info"
+    t.text     "program_task"
+    t.boolean  "status"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "questions", :force => true do |t|
+    t.text     "question_text"
+    t.string   "answer"
+    t.integer  "type"
+    t.boolean  "status"
+    t.integer  "task_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.string   "name"
+    t.text     "rec"
+    t.text     "task"
+    t.boolean  "status"
+    t.integer  "program_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.integer  "program_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.boolean  "program_status"
+  end
 
 end

@@ -49,8 +49,9 @@ body {
 
 .hero-unit.maincontainer {
 	margin-top: 50px;
-	height: 550px;
-	background-color: rgba(238,238,238,0.5);
+	min-height:550px;
+	/*height: 550px;*/
+	background-color: rgba(238,238,238,0.65);
 	border-radius: 20px;
 	border-style:solid;
 	border-width: 5px;
@@ -83,6 +84,12 @@ body {
 
 .font {
 	font-family: gruppo;
+}
+
+.header {
+	position: absolute;
+	right: 80px;
+	top: 80px;
 }
 
 .user_name_field {
@@ -129,8 +136,8 @@ table.programs {
 
 .back-btn {
 	position: absolute;
-	bottom: 65px;
-	right: 50px;
+	bottom:50px;
+
 }
 
 .back-btn-extended {
@@ -145,4 +152,61 @@ table.programs {
 	.play-track-btn {
 		padding-right: 25px;
 	}
+}
+
+table.info_table {
+	font-family: gruppo;
+	color: black;
+	.action1 {
+		width: 136px;
+	}
+
+}
+
+table.user_info_table {
+	font-family: gruppo;
+	color: black;
+
+	td {
+		padding_left: 10px;
+	}
+
+	.action1 {
+		width: 85px;
+	}
+	.action2{
+		width: 35px;
+
+		i {
+			top: 10px;
+			position: relative;
+			text-shadow:1px 3px #000000;
+		}
+		.icon-ok {
+			color: #75f11a;
+		}
+		.icon-remove{
+			color: #FF0602;
+		}
+	}
+	.action3{
+		width: 205px;
+	}
+
+	a{
+		color: black;
+	}
+}
+
+.back_and_remove div {
+	display: inline-block;
+	position: relative;
+
+	.remove{
+		right: 60px;
+	}
+}
+
+.back_and_remove .remove{
+	right: -20px;
 }

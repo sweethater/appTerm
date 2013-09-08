@@ -2,25 +2,23 @@
 %h1.font.black_font
 	Zvol program:
 
-- if @user_programs.empty?
+- if @user_program.nil?
 	%h1.font.black_font
 		Užívatel nemá žáden program
 
 - else
-	%table.table.programs
+	%table.table.info_table
 		%thead
 			%tr
 				%th.name
 				%th.action1
-				%th.action2
 
 		%tbody
-			-@user_programs.each do |program|
-				%tr
-					%td.name
-						%h2
-							= program.name
-					%td.action1
-						= link_to "Mé info", root_path, :class => "btn btn-primary btn-xlarge"
+			%tr
+				%td.name
+					%h2
+						= @user_program.name
+				%td.action1
+					= link_to "Mé info", user_info_user_program_path(@user.id, @user_program.id), :class => "btn btn-primary btn-xlarge"
 
 = render :partial => "common/back"

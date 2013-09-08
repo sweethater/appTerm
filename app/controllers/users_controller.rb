@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     else
       flash[:error] = 'dp'
     end
-    redirect_to programs_path
+    redirect_to user_programs_path(@user.id)
   end
 
   def destroy
@@ -28,7 +28,9 @@ class UsersController < ApplicationController
   def find
     @user = User.find_by_name(params[:name])
     if @user
-      redirect_to programs_path
+      @_current_user = @user
+      session[:current_user_id] = @user.id
+      redirect_to user_programs_path(@user.id)
     else
       redirect_to search_users_path
     end
@@ -40,8 +42,11 @@ class UsersController < ApplicationController
 
   def show_info
     @user = User.find_by_name(params[:name])
-    @user_programs = []
+    @user_program = Program.find(@user.program_id)
+    # @user_program = []
+    # @user_program << Program.find(@user.program_id)
     if @user
+      # @user_programs = []
       # programs = Program.all
       # programs.each do |program|
       #   program.users.each do |u|

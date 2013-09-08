@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  rec: MyText
+  task: MyText
+  program_id: 1
+
+two:
+  name: MyString
+  rec: MyText
+  task: MyText
+  program_id: 1
