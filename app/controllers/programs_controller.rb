@@ -37,7 +37,7 @@ class ProgramsController < ApplicationController
     @user.program_id = @program.id
     @user.program_status = 1
     @user.save
-    redirect_to info_program_path(@program)
+    redirect_to info_user_program_path( @user.id, @program.id)
   end
 
 

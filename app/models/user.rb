@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
-  attr_accessible :answers, :name, :program_id
+  attr_accessible :answers, :name, :program_id, :program_status, :task_readed, :task_percentage
 
   belongs_to :program
+
+  serialize :task_readed,Array
+  serialize :task_percentage,Array
 
   validates :name, :presence => true, :length => { :minimum => 2, :maximum => 8}
   validates_uniqueness_of :name#, :scope => :program_id, :case_sensitive => false
