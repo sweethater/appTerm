@@ -34,12 +34,30 @@ class ProgramsController < ApplicationController
   def begin_program
     @program = Program.find(params[:id])
     @user = User.find(params[:user_id])
+
     @user.program_id = @program.id
     @user.program_status = 1
+
+    @program.tasks.count.times do
+      @user.task_readed << false
+      @user.task_percentage << nil
+    end
+
     @user.save
+
     redirect_to info_user_program_path( @user.id, @program.id)
   end
 
+  def destroy
+    @user = User.find(:user_id)
+    @user.program_id = nil
+    @user.program_status = 0
+    @user.task_readed = []
+    @user.task_percentage = []
+
+    @user.save
+
+  end
 
 
 end

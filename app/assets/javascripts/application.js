@@ -25,4 +25,8 @@ function TERMINAL_Init(){
 	$('.name_tooltip').tooltip({ 'trigger':'click',
 								    'title': 'Maximalne 8 znakou',
 									'placement': 'bottom'});
+
+	$('a.disabled').on("click", function (e) {
+        e.preventDefault();
+    });
 }
