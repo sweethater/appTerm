@@ -12,8 +12,8 @@
 		- case @task.question_type
 		- when 0
 			.yesno-buttons
-				= link_to "Ano", :back, :class => "btn btn-primary btn-large first"
-				= link_to "Ne", :back, :class => "btn btn-primary btn-large second"
+				= link_to "Ano", answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large first"
+				= link_to "Ne", answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large second"
 
 		- when 1
 			.block-buttons

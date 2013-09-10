@@ -8,4 +8,7 @@
 		Gratulujem !
 
 .back-btn.button-right
-	= link_to "Pokračovat", task_user_program_path(@user.id, @program.id), :class => "btn btn-success btn-xlarge font-bold"
+	- if @user.task_percentage.include?(nil)
+		= link_to "Pokračovat", task_user_program_path(@user.id, @program.id), :class => "btn btn-success btn-xlarge font-bold"
+	- else
+		= link_to "Statistika", user_info_user_program_path(@user.id, @program.id), :class => "btn btn-info btn-xlarge font-bold"

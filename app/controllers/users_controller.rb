@@ -36,8 +36,13 @@ class UsersController < ApplicationController
         @program = Program.find(@user.program_id)
         @task = @program.tasks[@user.last_task_number]
 
-        redirect_to user_task_path(@user.id, @task.id)
+        if !@user.task_percentage.include?(nil)
+          redirect_to user_info_user_program_path(@user.id, @program.id)
+        else
+          redirect_to user_task_path(@user.id, @task.id)
+        end
       else
+
         redirect_to user_programs_path(@user.id)
       end
 
