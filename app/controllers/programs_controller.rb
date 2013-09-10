@@ -1,7 +1,7 @@
 class ProgramsController < ApplicationController
 
   def index
-    @programs = Program.all
+    @programs = Program.all.reject {|p| p.tasks.count == 0 }
     @user = User.find(params[:user_id])
 
     unless @user.program_id.nil?
@@ -14,6 +14,7 @@ class ProgramsController < ApplicationController
   def info
     @program = Program.find(params[:id])
     @user = User.find(params[:user_id])
+
   end
 
   def user_info
@@ -25,10 +26,17 @@ class ProgramsController < ApplicationController
 
   def task
     @program = Program.find(params[:id])
-    @tasks_count = @program.tasks.count
     @user = User.find(params[:user_id])
 
-    #User.scope_search(@user.name)
+    @tasks_count = @program.tasks.count
+    @task_number = @user.task_percentage.index(nil)
+
+    @task = @program.tasks[@task_number]
+
+    @user.task_readed[@task_number] = true
+    @user.last_task_number = @task_number
+    @user.save
+
   end
 
   def begin_program
@@ -37,13 +45,13 @@ class ProgramsController < ApplicationController
 
     @user.program_id = @program.id
     @user.program_status = 1
+    @user.save
 
     @program.tasks.count.times do
       @user.task_readed << false
       @user.task_percentage << nil
+      @user.save
     end
-
-    @user.save
 
     redirect_to info_user_program_path( @user.id, @program.id)
   end
@@ -51,12 +59,12 @@ class ProgramsController < ApplicationController
   def destroy
     @user = User.find(:user_id)
     @user.program_id = nil
-    @user.program_status = 0
+    @user.program_status = false
     @user.task_readed = []
     @user.task_percentage = []
+    @user.last_task_number = nil
 
     @user.save
-
   end
 
 

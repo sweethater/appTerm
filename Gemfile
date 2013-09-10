@@ -27,7 +27,8 @@ group :assets do
 end
 
 group :development do
-gem 'pry'
+  gem 'pry'
+  gem 'pry-debugger'
 end
 
 gem 'font-awesome-rails'

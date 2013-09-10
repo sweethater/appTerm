@@ -30,7 +30,17 @@ class UsersController < ApplicationController
     if @user
       @_current_user = @user
       session[:current_user_id] = @user.id
-      redirect_to user_programs_path(@user.id)
+
+      if @user.last_task_number != nil
+
+        @program = Program.find(@user.program_id)
+        @task = @program.tasks[@user.last_task_number]
+
+        redirect_to user_task_path(@user.id, @task.id)
+      else
+        redirect_to user_programs_path(@user.id)
+      end
+
     else
       redirect_to search_users_path
     end

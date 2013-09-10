@@ -48,7 +48,7 @@ body {
 }
 
 .hero-unit.maincontainer {
-	/*margin-top: 50px;*/
+	margin-top: 50px;
 	min-height:500px;
 	/*height: 550px;*/
 	background-color: rgba(238,238,238,0.65);
@@ -80,6 +80,11 @@ body {
 	font-family: gruppo;
 	text-align: center;
 	color: black !important;
+}
+
+.font-bold {
+	font-family: gruppo;
+	font-weight: bold;
 }
 
 .font {
@@ -212,4 +217,71 @@ table.user_info_table {
 
 .back_and_remove .remove{
 	right: -20px;
+}
+
+.button-right {
+	right: 30px;
+}
+
+.task-question-container {
+	min-height: 310px;
+}
+
+.yesno-buttons {
+	.btn {
+		width: 100px;
+	}
+	.first {
+		margin-right: 70px;
+	}
+}
+
+.block-buttons {
+	.three-buttons,
+	.four-buttons,
+	.five-buttons {
+		.first-row {
+			margin-bottom: 12px;
+			.first {
+				margin-right: 40px;
+			}
+		}
+	}
+
+	.four-buttons {
+		.third {
+			margin-right: 40px;
+		}
+	}
+
+	.five-buttons {
+
+		.third {
+			margin-right: 20px;
+		}
+		.forth{
+			margin-right: 20px;
+		}
+	}
+}
+
+.typing-buttons {
+	margin-top: 40px;
+	.from-answer div {
+		display: inline;
+
+		#answer {
+			height: 34px;
+			margin-right: 25px;
+			width: 650px;
+			font-size: 35px;
+		}
+	}
+}
+
+.task-answer-container {
+	.next-btn {
+		position: absolute;
+		right: 30px;
+	}
 }

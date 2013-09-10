@@ -1,0 +1,11 @@
+%h3.font.black_font.header
+	= "#{@current_task_number}. úkol z #{@tasks_count}."
+%h1.font.black_font
+	= @program.name
+
+.task-answer-container.font
+	%h3
+		Gratulujem !
+
+.back-btn.button-right
+	= link_to "Pokračovat", task_user_program_path(@user.id, @program.id), :class => "btn btn-success btn-xlarge font-bold"

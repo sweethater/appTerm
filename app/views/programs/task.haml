@@ -1,10 +1,12 @@
 %h3.font.black_font.header
-	= "1. úkol z #{@tasks_count}."
+	= "#{@task_number+1}. úkol z #{@tasks_count}."
 %h1.font.black_font
 	= @program.name
 
 .program-info-container
 	%h3.font.black_font
-		= @program.program_task
+		= @task.task
 
-= render :partial => "common/ok"
+.back-btn.button-right
+	= link_to :root, :class => "btn btn-primary btn-xlarge" do
+		%i.icon-ok.icon-large

@@ -20,6 +20,11 @@ Terminal::Application.routes.draw do
       get 'begin_program', :on => :member
       get 'user_info', :on => :member
     end
+
+    resources :tasks do
+      get 'answer', :on => :member
+      get 'reshow', :on => :member
+    end
   end
 
   resources :programs do
@@ -29,6 +34,8 @@ Terminal::Application.routes.draw do
 
     end
   end
+
+
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
