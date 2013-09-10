@@ -1,0 +1,39 @@
+.container
+	%h2
+		%i.icon-group
+		Užívatelé
+
+= link_to new_admin_user_path, :class=>"btn btn-info btn-new" do
+	%i.icon-plus-sign
+	Nový užívatel
+
+
+%table.users.table.table-hover
+	%thead
+		%tr
+			%th.name
+				Meno
+			%th.program
+				Aktualny program
+			%th.action
+				Akcie
+	%tbody
+		- @users.each do |user|
+			%tr
+				%td.name
+					= user.name
+				%td.program
+					- unless user.program_id
+						nic
+					-else
+						= Program.find(user.program_id)
+				%td.action
+					= link_to admin_user_path(user.id), :class => "show_link" do
+						%i.icon-info
+						pozri
+					= link_to edit_admin_user_path(user.id), :class => "edit_link"  do
+						%i.icon-edit
+						upravit
+					= link_to admin_user_path(user.id), :confirm => "Zmazat úkol #{user.name} ?", :method => :delete, :class => "delete_link" do
+						%i.icon-trash
+						zmazat

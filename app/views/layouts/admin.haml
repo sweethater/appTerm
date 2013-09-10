@@ -1,0 +1,29 @@
+!!!
+%html
+	%head
+		%title Terminal
+		= stylesheet_link_tag    "admin"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+	%body
+	.nabbar-wrapper
+		.container
+			.navbar.navbar-inverse
+				.navbar-inner
+					.container-fluid
+						= link_to root_path, :class=>"brand" do
+							%i.icon-rocket.icon-large.icon-white
+							Terminal
+						%ul.nav.nav-pills.pull-right
+							%li
+								=link_to "Užívatelé", admin_users_path
+							%li
+								=link_to "Programy", admin_programs_path
+							%li
+								=link_to "Úkoly", admin_tasks_path
+	.container
+		.row-fluid
+			.span12
+				.hero-unit.maincontainer
+
+					= yield

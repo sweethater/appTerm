@@ -1,0 +1,34 @@
+%h2
+	%i.icon-group
+	Úkoly
+
+= link_to new_admin_program_path, :class=>"btn btn-info btn-new" do
+	%i.icon-plus-sign
+	Nový úkol
+
+%table.tasks.table.table-hover
+	%thead
+		%tr
+			%th.name
+				Meno
+			%th.tasks
+				Program
+			%th.action
+				Akcie
+	%tbody
+		- @tasks.each do |task|
+			%tr
+				%td.name
+					= task.name
+				%td.tasks
+					= link_to task.program.name, admin_program_path(task.program.id)
+				%td.action
+					= link_to admin_task_path(task.id), :class => "show_link" do
+						%i.icon-info
+						pozri
+					= link_to edit_admin_task_path(task.id), :class => "edit_link" do
+						%i.icon-edit
+						upravit
+					= link_to admin_task_path(task.id), :confirm => "Zmazat úkol #{task.name} ?", :method => :delete, :class => "delete_link" do
+						%i.icon-trash
+						zmazat

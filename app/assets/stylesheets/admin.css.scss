@@ -1,0 +1,43 @@
+/*
+ *= require bootstrap
+ *= require font-awesome
+ */
+
+
+body {
+	background-image: url('background.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+}
+
+.navbar {
+	margin-top: 20px;
+}
+
+table.users,
+table.programs,
+table.tasks {
+	margin-top: 20px;
+	thead {
+		th.name {
+			width: 200px;
+		}
+		th.program {
+
+		}
+		th.action {
+			width: 250px;
+		}
+	}
+
+	tbody {
+		.show_link {
+			margin-right: 20px;
+		}
+
+		.edit_link {
+			margin-right: 20px;
+		}
+	}
+}

@@ -34,6 +34,11 @@ end
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 
+# ActiveAdmin
+# gem 'activeadmin'
+# gem "meta_search",    '>= 1.1.0.pre'
+# ActiveAdmin
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
