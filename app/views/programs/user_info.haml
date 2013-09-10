@@ -35,5 +35,5 @@
 		= link_to root_path, :class => 'btn btn-warning btn-xlarge' do
 			Zpět
 	.remove
-		= link_to :back, :class => 'btn btn-danger btn-xlarge' do
+		= link_to user_program_path(@user.id, @program.id), :method => :delete, :class => 'btn btn-danger btn-xlarge' do
 			Zmazat program

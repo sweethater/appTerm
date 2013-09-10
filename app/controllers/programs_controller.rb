@@ -57,7 +57,7 @@ class ProgramsController < ApplicationController
   end
 
   def destroy
-    @user = User.find(:user_id)
+    @user = User.find(params[:user_id])
     @user.program_id = nil
     @user.program_status = false
     @user.task_readed = []
@@ -65,6 +65,8 @@ class ProgramsController < ApplicationController
     @user.last_task_number = nil
 
     @user.save
+
+    redirect_to user_programs_path(@user.id)
   end
 
 
