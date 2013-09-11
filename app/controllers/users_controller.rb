@@ -10,10 +10,13 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:success] = 'ok'
+      redirect_to user_programs_path(@user.id)
     else
       flash[:error] = 'dp'
+      redirect_to new_user_path
     end
-    redirect_to user_programs_path(@user.id)
+    #binding.pry
+
   end
 
   def destroy

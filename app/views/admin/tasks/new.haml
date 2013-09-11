@@ -1,0 +1,68 @@
+.container
+	%h2
+		%i.icon-tasks
+		Nový úkol
+.new_task_form
+	= form_tag "/admin/programs/#{@program.id}/tasks" do
+		.name.control-group
+			= label_tag "Jméno"
+			= text_field_tag :name, nil, :autocomplete => "off"
+		.task.control-group
+			.areas
+				.task.control-group
+					= label_tag "Úkol"
+					= text_area_tag :task, nil, :autocomplete => "off"
+			.areas
+				.rec.control-group
+					= label_tag "Motivace"
+					= text_area_tag :rec, nil, :autocomplete => "off"
+		.task.control-group
+			.areas
+				.reverse.control-group
+					= label_tag "Úkol - opak"
+					= text_area_tag :reverse, nil, :autocomplete => "off"
+			.areas
+				.question.control-group
+					= label_tag "Otázka"
+					= text_area_tag :question, nil, :autocomplete => "off"
+
+		%ul.nav.nav-tabs
+
+		.goodbad.control-group
+			.areas
+				.reverse.control-group
+					= label_tag "Dobrá odpověď"
+					= text_area_tag :good, nil, :autocomplete => "off"
+			.areas
+				.question.control-group
+					= label_tag "Zlá odpověď"
+					= text_area_tag :bad, nil, :autocomplete => "off"
+
+		%ul.nav.nav-tabs
+
+		.answer.answer1.control-group
+			= label_tag "Odpověď 1 - Správna odpověď"
+			= text_field_tag :answer1, nil, :autocomplete => "off"
+
+		.answer.answer2.control-group.hide
+			= label_tag "Odpověď 2"
+			= text_field_tag :answer2, nil, :autocomplete => "off"
+
+		.answer.answer3.control-group.hide
+			= label_tag "Odpověď 3"
+			= text_field_tag :answer3, nil, :autocomplete => "off"
+
+		.answer.answer4.control-group.hide
+			= label_tag "Odpověď 4"
+			= text_field_tag :answer4, nil, :autocomplete => "off"
+
+		.answer.answer5.control-group.hide
+			= label_tag "Odpověď 5"
+			= text_field_tag :answer5, nil, :autocomplete => "off"
+
+		.add_answer_button
+			= button_tag :type => "button", :class => "btn btn-success add_answer" do
+				Pridaj odpoveď
+
+		.submit.control-group
+			= submit_tag "Vytvoř úkol", :class => "btn btn-info"

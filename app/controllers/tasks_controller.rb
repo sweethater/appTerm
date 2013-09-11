@@ -7,6 +7,8 @@ class TasksController < ApplicationController
 
     @tasks_count = @program.tasks.count
     @current_task_number = @user.last_task_number + 1
+
+    @task.task_answers.shuffle!
   end
 
   def answer
@@ -17,8 +19,32 @@ class TasksController < ApplicationController
     @tasks_count = @program.tasks.count
     @current_task_number = @user.last_task_number + 1
 
-    @user.task_percentage[@user.last_task_number] = true
+    case @task.question_type
+    when 0
+      if params[:value].downcase == @task.question_answer.downcase
+        @user.task_percentage[@user.last_task_number] = true
+      else
+        @user.task_percentage[@user.last_task_number] = false
+      end
+
+    when 1
+      if params[:value].downcase == @task.question_answer.downcase
+        @user.task_percentage[@user.last_task_number] = true
+      else
+        @user.task_percentage[@user.last_task_number] = false
+      end
+
+    when 2
+      if params[:user_answer].to_i == @task.question_answer.to_i
+        @user.task_percentage[@user.last_task_number] = true
+      else
+        @user.task_percentage[@user.last_task_number] = false
+      end
+    end
+
     @user.save
+
+    #binding.pry
 
   end
 

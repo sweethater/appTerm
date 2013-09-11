@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
-  attr_accessible :name, :program_id, :rec, :task, :status, :question, :question_answer, :question_type, :task_answers
+  attr_accessible :name, :program_id, :rec, :task, :status, :question, :question_answer, :question_type, :task_answers, :reverse, :good, :bad
 
   QUESTION_TYPES = { 0 => "yesno", 1=> "block", 2=> "typing"}
 

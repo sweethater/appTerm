@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130909222027) do
+ActiveRecord::Schema.define(:version => 20130911213240) do
 
   create_table "answers", :force => true do |t|
     t.text     "answer"
@@ -40,6 +40,9 @@ ActiveRecord::Schema.define(:version => 20130909222027) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.text     "task_answers"
+    t.text     "reverse"
+    t.text     "good"
+    t.text     "bad"
   end
 
   create_table "users", :force => true do |t|

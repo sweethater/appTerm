@@ -3,6 +3,10 @@
 %h1.font.black_font
 	= @program.name
 
+.task-reverse-container.font.black_font
+	%h3
+		= @task.reverse
+
 .task-question-container.font.black_font
 	%h3
 		= @task.question
@@ -12,8 +16,8 @@
 		- case @task.question_type
 		- when 0
 			.yesno-buttons
-				= link_to "Ano", answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large first"
-				= link_to "Ne", answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large second"
+				= link_to "Ano", answer_user_task_path(@user.id, @task.id, :value => "Ano"), :class => "btn btn-primary btn-large first"
+				= link_to "Ne", answer_user_task_path(@user.id, @task.id, :value => "Ne"), :class => "btn btn-primary btn-large second"
 
 		- when 1
 			.block-buttons
@@ -21,33 +25,33 @@
 				- when 3
 					.three-buttons
 						.first-row
-							= link_to @task.task_answers[0] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large first"
-							= link_to @task.task_answers[1] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large second"
+							= link_to @task.task_answers[0] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[0]), :class => "btn btn-primary btn-large first"
+							= link_to @task.task_answers[1] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[1]), :class => "btn btn-primary btn-large second"
 						.second-row
-							= link_to @task.task_answers[2] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large third"
+							= link_to @task.task_answers[2] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[2]), :class => "btn btn-primary btn-large third"
 				- when 4
 					.four-buttons
 						.first-row
-							= link_to @task.task_answers[0] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large first"
-							= link_to @task.task_answers[1] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large second"
+							= link_to @task.task_answers[0] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[0]), :class => "btn btn-primary btn-large first"
+							= link_to @task.task_answers[1] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[1]), :class => "btn btn-primary btn-large second"
 						.second-row
-							= link_to @task.task_answers[2] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large third"
-							= link_to @task.task_answers[3] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large forth"
+							= link_to @task.task_answers[2] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[2]), :class => "btn btn-primary btn-large third"
+							= link_to @task.task_answers[3] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[3]), :class => "btn btn-primary btn-large forth"
 
 				- when 5
 					.five-buttons
 						.first-row
-							= link_to @task.task_answers[0] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large first"
-							= link_to @task.task_answers[1] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large second"
+							= link_to @task.task_answers[0] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[0]), :class => "btn btn-primary btn-large first"
+							= link_to @task.task_answers[1] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[1]), :class => "btn btn-primary btn-large second"
 						.second-row
-							= link_to @task.task_answers[2] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large third"
-							= link_to @task.task_answers[3] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large forth"
-							= link_to @task.task_answers[4] , answer_user_task_path(@user.id, @task.id), :class => "btn btn-primary btn-large fifth"
+							= link_to @task.task_answers[2] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[2]), :class => "btn btn-primary btn-large third"
+							= link_to @task.task_answers[3] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[3]), :class => "btn btn-primary btn-large forth"
+							= link_to @task.task_answers[4] , answer_user_task_path(@user.id, @task.id, :value => @task.task_answers[4]), :class => "btn btn-primary btn-large fifth"
 
 		- when 2
 			.typing-buttons
 				= form_tag answer_user_task_path(@user.id, @task.id), :method => 'get', :class=> "form-inline from-answer" do
 					.name.control-group
-						= text_field_tag 'answer', nil, :class => "search-query font-bold", :autocomplete => "off"
+						= text_field_tag :user_answer, nil, :class => "search-query font-bold", :autocomplete => "off"
 					.submit.control-group
 						= submit_tag "Odpovedať",:class => "btn btn-success btn-large font-bold"

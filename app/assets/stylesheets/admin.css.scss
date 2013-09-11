@@ -47,3 +47,34 @@ table.tasks {
 		}
 	}
 }
+
+.new_task_form {
+	textarea {
+		width: 380px;
+		height: 100px;
+	}
+
+	.areas{
+		display: inline-block;
+
+		.task,
+		.question,
+		.reverse,
+		.rec {
+			margin-right: 50px;
+		}
+	}
+
+	#answer1,
+	#answer2,
+	#answer3,
+	#answer4,
+	#answer5 {
+		width: 450px;
+	}
+
+	.add_answer{
+		margin-bottom: 25px;
+	}
+}
+

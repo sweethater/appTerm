@@ -5,7 +5,10 @@
 
 .task-answer-container.font
 	%h3
-		Gratulujem !
+		- if @user.task_percentage[@user.last_task_number]
+			= @task.good
+		- else
+			= @task.bad
 
 .back-btn.button-right
 	- if @user.task_percentage.include?(nil)

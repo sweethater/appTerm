@@ -1,6 +1,8 @@
-%h2
-	%i.icon-gamepad
-	Programy
+.container
+	%h2
+		%i.icon-rocket
+		Nový program
+
 
 = link_to new_admin_program_path, :class=>"btn btn-info btn-new" do
 	%i.icon-plus-sign
@@ -9,7 +11,7 @@
 %table.programs.table.table-hover
 	%thead
 		%tr
-			%th.name
+			%th.program-name
 				Meno
 			%th.tasks
 				Počet úkolú
@@ -18,12 +20,12 @@
 	%tbody
 		- @programs.each do |program|
 			%tr
-				%td.name
+				%td.program-name
 					= program.name
 				%td.tasks
 					= program.tasks.count
 				%td.program-action
-					= link_to admin_program_path(program.id), :class => "show_link" do
+					= link_to new_admin_program_task_path(program.id), :class => "show_link" do
 						%i.icon-plus
 						přidat úkol
 					= link_to admin_program_path(program.id), :class => "show_link" do
