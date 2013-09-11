@@ -23,11 +23,17 @@ table.tasks {
 		th.name {
 			width: 200px;
 		}
+		th.program-name{
+			width: 300px;
+		}
 		th.program {
 
 		}
 		th.action {
 			width: 250px;
+		}
+		th.program-action{
+			width: 400px;
 		}
 	}
 

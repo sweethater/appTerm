@@ -1,0 +1,14 @@
+.container
+	%h2
+		%i.icon-group
+		Nový program
+
+= form_for [:admin,@program], :method => :post do |c|
+	.name.control-group
+		= c.label :name
+		= c.text_field :name, :placeholder => "2 - 8 písmen"
+	.info.control-group
+		= c.label :info
+		= c.text_area :info, :placeholder => "Informace o programu", :size => "30x5"
+	.submit.control-group
+		= c.submit "Vytvoř program", :class => "btn btn-info"

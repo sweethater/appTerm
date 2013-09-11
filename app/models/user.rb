@@ -6,8 +6,9 @@ class User < ActiveRecord::Base
   serialize :task_readed, Array
   serialize :task_percentage, Array
 
-  validates :name, :presence => true, :length => { :minimum => 2, :maximum => 8}
-  validates_uniqueness_of :name#, :scope => :program_id, :case_sensitive => false
+  validates :name, :presence => true, :length => { :minimum => 2, :maximum => 8}, :uniqueness => true
+  validates :name, :format => { :with => /^\w+$/i }
+  #validates_uniqueness_of :name, :scope => :program_id, :case_sensitive => false
 
 
   def self.scope_search(user_name)

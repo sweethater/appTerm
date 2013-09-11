@@ -1,0 +1,11 @@
+.container
+	%h2
+		%i.icon-group
+		Nový užívatel
+
+= form_for [:admin,@user], :method => :post do |c|
+	.name.control-group
+		= c.label :name
+		= c.text_field :name, :placeholder => "2 - 8 písmen"
+	.submit.control-group
+		= c.submit "Vytvoř uživatele", :class => "btn btn-info"

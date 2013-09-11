@@ -57,21 +57,25 @@ class UsersController < ApplicationController
 
   def show_info
     @user = User.find_by_name(params[:name])
-    @user_program = Program.find(@user.program_id)
-    # @user_program = []
-    # @user_program << Program.find(@user.program_id)
-    if @user
-      # @user_programs = []
-      # programs = Program.all
-      # programs.each do |program|
-      #   program.users.each do |u|
-      #     if u == @user.name
-      #       @user_programs << program
-      #     end
-      #   end
-      # end
+    if @user.program_id
+      @user_program = Program.find(@user.program_id)
+      # @user_program = []
+      # @user_program << Program.find(@user.program_id)
+      if @user
+        # @user_programs = []
+        # programs = Program.all
+        # programs.each do |program|
+        #   program.users.each do |u|
+        #     if u == @user.name
+        #       @user_programs << program
+        #     end
+        #   end
+        # end
+      else
+        redirect_to info_users_path
+      end
     else
-      redirect_to info_users_path
+      redirect_to user_programs_path(@user.id)
     end
   end
 
