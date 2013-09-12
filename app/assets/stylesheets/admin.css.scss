@@ -6,9 +6,7 @@
 
 body {
 	background-image: url('background.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment:fixed;
+
 }
 
 .navbar {
@@ -70,11 +68,15 @@ table.tasks {
 	#answer3,
 	#answer4,
 	#answer5 {
-		width: 450px;
+		width: 400px;
 	}
 
 	.add_answer{
 		margin-bottom: 25px;
+		width: 413px;
+	}
+	.submit {
+		width: 413px;
 	}
 }
 
@@ -92,4 +94,25 @@ table.tasks {
 	text-shadow:1px 3px #000000;
 }
 
-
+.tooltip-and-answers {
+	position: relative;
+	.answers {
+		min-height: 215px;
+	}
+	.tooltips {
+		position: absolute;
+		background-color: #f9f9f9;
+		padding: 10px;
+		border-radius: 10px;
+		right: 60px;
+		top: 5px;
+		width: 380px;
+		min-height: 120px;
+		.header {
+			font-weight: bold;
+		}
+		.tab-content {
+			font-size: 12px;
+		}
+	}
+}

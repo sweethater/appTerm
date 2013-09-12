@@ -26,7 +26,7 @@
 					= label_tag "Otázka"
 					= text_area_tag :question, nil, :autocomplete => "off"
 
-		%ul.nav.nav-tabs
+		%ul.nav.nav-tabs.first
 
 		.goodbad.control-group
 			.areas
@@ -38,31 +38,77 @@
 					= label_tag "Zlá odpověď"
 					= text_area_tag :bad, nil, :autocomplete => "off"
 
-		%ul.nav.nav-tabs
+		%ul.nav.nav-tabs.second
 
-		.answer.answer1.control-group
-			= label_tag "Odpověď 1 - Správna odpověď"
-			= text_field_tag :answer1, nil, :autocomplete => "off"
+		.tooltip-and-answers
+			.tooltips
+				%ul#myTab.nav.nav-tabs.hide
+					%li.active
+						%a{:href => "#home"} Home
+					%li
+						%a{:href => "#profile"} Profile
+					%li
+						%a{:href => "#messages"} Messages
 
-		.answer.answer2.control-group.hide
-			= label_tag "Odpověď 2"
-			= text_field_tag :answer2, nil, :autocomplete => "off"
+				.tab-content
+					#home.tab-pane.active
+						.header
+							Zadej odpověď:
+						.info
+							Je možní zadat následující regulární výrazy:
+						%ul
+							%li
+								= "==300  :užívatel musí zadat přesnou hodnotu 300"
+							%li
+								= ">>300  :užívatel musí zadat větší hodnotu než 300"
+							%li
+								= "<<300  :užívatel musí zadat menší hodnotu než 300"
+							%li
+								= "+-50:300  :užívatel musí zadat hodnotu v intervalu 50 hodnoty 300"
+					#profile.tab-pane
+						.header
+							Ano / Ne odpověd:
+						.info
+							Je treba zadat obě hodnoty (Ano / Ne).
+						.info
+							Správnou odpověď je třeba zadat do prvního pole, nesprávnou do druhého pole
 
-		.answer.answer3.control-group.hide
-			= label_tag "Odpověď 3"
-			= text_field_tag :answer3, nil, :autocomplete => "off"
+					#messages.tab-pane
+						.header
+							Blok odpovedí:
+						.info
+							Je treba zadat aspoň tri hodnoty.
+						.info
+							Správnou odpověď je třeba zadat do prvního pole, nesprávné odpovědi do ostatních polí.
+						.info
+							Odpovědi budou uživatelé při zadání otázky zamíchány.
 
-		.answer.answer4.control-group.hide
-			= label_tag "Odpověď 4"
-			= text_field_tag :answer4, nil, :autocomplete => "off"
+			.answers
 
-		.answer.answer5.control-group.hide
-			= label_tag "Odpověď 5"
-			= text_field_tag :answer5, nil, :autocomplete => "off"
+				.answer.answer1.control-group
+					= label_tag "Odpověď 1 - Správna odpověď"
+					= text_field_tag :answer1, nil, :autocomplete => "off"
 
-		.add_answer_button
-			= button_tag :type => "button", :class => "btn btn-success add_answer" do
-				Pridaj odpoveď
+				.answer.answer2.control-group.hide
+					= label_tag "Odpověď 2"
+					= text_field_tag :answer2, nil, :autocomplete => "off"
 
-		.submit.control-group
-			= submit_tag "Vytvoř úkol", :class => "btn btn-info"
+				.answer.answer3.control-group.hide
+					= label_tag "Odpověď 3"
+					= text_field_tag :answer3, nil, :autocomplete => "off"
+
+				.answer.answer4.control-group.hide
+					= label_tag "Odpověď 4"
+					= text_field_tag :answer4, nil, :autocomplete => "off"
+
+				.answer.answer5.control-group.hide
+					= label_tag "Odpověď 5"
+					= text_field_tag :answer5, nil, :autocomplete => "off"
+
+				.add_answer_button
+					= button_tag :type => "button", :class => "btn btn-success add_answer" do
+						Pridaj odpoveď
+
+
+				.submit.control-group
+					= submit_tag "Vytvoř úkol", :class => "btn btn-info submit"
