@@ -1,0 +1,14 @@
+.container
+	%h2
+		%i.icon-rocket
+		Uprav program
+
+= form_for [:admin,@program], :method => :put do |c|
+	.name.control-group
+		= c.label "Jmeno"
+		= c.text_field :name, :placeholder => "Jméno programu"
+	.info.control-group
+		= c.label :info
+		= c.text_area :info, :placeholder => "Informace o programu", :size => "30x5"
+	.submit.control-group
+		= c.submit "Uprav program", :class => "btn btn-info"

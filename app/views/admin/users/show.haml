@@ -1,0 +1,23 @@
+.container
+	%h2
+		%i.icon-user
+		= @user.name
+
+
+%table.table.user_info_table
+	%tbody
+		- @program.tasks.each_with_index do |task, i|
+			%tr
+				%td.name
+					%h3
+						= task.name
+
+				%td.action2
+					- if @user.task_percentage[i]
+						%i.icon-ok.icon-2x
+					- elsif @user.task_percentage[i] == false
+						%i.icon-remove.icon-2x
+					- else
+						%i.icon-question.icon-2x
+
+= link_to "Spět", admin_users_path, :class => "btn btn-medium btn-info"

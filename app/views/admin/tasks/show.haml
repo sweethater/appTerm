@@ -1,0 +1,41 @@
+.container
+	%h2
+		%i.icon-task
+		= @task.name
+
+	%h3
+		Úkol:
+	%h4
+		= @task.task
+	%h3
+		Motivace:
+	%h4
+		= @task.rec
+	%h3
+		Úkol - opak:
+	%h4
+		= @task.reverse
+	%h3
+		Otázka:
+	%h4
+		= @task.question
+	%h3
+		Dobrá odpověď:
+	%h4
+		= @task.good
+	%h3
+		Zlá odpověď:
+	%h4
+		= @task.bad
+	%h3
+		Odpovědi:
+	%h4
+		-case @task.question_type
+		-when 0
+			- @task.task_answers.each do |a|
+				= a
+		-when 1
+			- @task.task_answers.each do |a|
+				= a
+		-when 2
+			- @task.task_answers

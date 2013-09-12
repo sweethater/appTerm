@@ -36,7 +36,6 @@ class ProgramsController < ApplicationController
     @user.task_readed[@task_number] = true
     @user.last_task_number = @task_number
     @user.save
-
   end
 
   def begin_program

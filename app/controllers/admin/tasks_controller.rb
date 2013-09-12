@@ -4,9 +4,13 @@ class Admin::TasksController < Admin::DashboardController
     @tasks = Task.all
   end
 
+  def show
+    @task = Task.find(params[:id])
+  end
+
   def new
     @program = Program.find(params[:program_id])
-    @task
+    @task = Task.new
   end
 
   def create
