@@ -10,7 +10,8 @@
 					%h3
 						= task.name
 				%td.action1
-					- if @user.task_percentage[i] == false
+					/ - if @user.task_percentage[i] == false
+					- if !@user.task_percentage.include?(nil) and @user.task_percentage[i] == false
 						%h3.font.black_font
 							= link_to "Znovu?", task_again_user_task_path(@user.id, task.id), :class => "btn btn-large"
 				%td.action2
@@ -22,7 +23,8 @@
 						%i.icon-question.icon-2x
 
 				%td.action3
-					- if @user.task_percentage[i] == nil
+					/ - if @user.task_percentage[i] == nil
+					- if @user.task_percentage.include?(nil)
 						%h3.font.black_font
 							= link_to "Zopakovat otázku", task_recap_user_task_path(@user.id, task.id), :class => "btn btn-info btn-large disabled"
 					- else
