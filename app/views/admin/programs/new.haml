@@ -6,10 +6,10 @@
 = form_for [:admin,@program], :method => :post do |c|
 	.name.control-group
 		= c.label "Jmeno"
-		= c.text_field :name, :placeholder => "Jméno programu"
+		= c.text_field :name, :placeholder => "Jméno programu", :autocomplete => "off"
 	.info.control-group
 		= c.label :info
-		= c.text_area :info, :placeholder => "Informace o programu", :size => "30x5"
+		= c.text_area :info, :placeholder => "Informace o programu", :size => "30x5", :autocomplete => "off"
 	.mp3.control-group
 		= c.file_field :mp3
 	.submit.control-group

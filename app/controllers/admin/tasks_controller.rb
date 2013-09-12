@@ -20,7 +20,6 @@ class Admin::TasksController < Admin::DashboardController
 
   def update
     @task = Task.find(params[:id])
-    binding.pry
 
     @task.name = params[:name]
     @task.task = params[:task]

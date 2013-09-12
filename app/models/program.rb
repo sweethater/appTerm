@@ -5,7 +5,7 @@ class Program < ActiveRecord::Base
                     :url => ":rails_root/public/:filename",
                     :path => ":rails_root/public/:filename"
 
-  has_many :users
+  has_many :users, dependent: :destroy
   has_many :tasks, dependent: :destroy
 
   validates :name, :presence => true, :uniqueness => true

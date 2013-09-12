@@ -1,0 +1,9 @@
+namespace :user_delete_jobs do
+
+	desc "deleting all users which reachet expiration level"
+	task :user_delete_jobs => :environment do
+
+	end
+
+
+end
