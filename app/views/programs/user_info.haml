@@ -12,8 +12,7 @@
 				%td.action1
 					- if @user.task_percentage[i] == false
 						%h3.font.black_font
-							= link_to "Znovu?", :back, :class => "btn btn-large"
-
+							= link_to "Znovu?", task_again_user_task_path(@user.id, task.id), :class => "btn btn-large"
 				%td.action2
 					- if @user.task_percentage[i]
 						%i.icon-ok.icon-2x
@@ -25,10 +24,10 @@
 				%td.action3
 					- if @user.task_percentage[i] == nil
 						%h3.font.black_font
-							= link_to "Zopakovat otázku", :back, :class => "btn btn-info btn-large disabled"
+							= link_to "Zopakovat otázku", task_recap_user_task_path(@user.id, task.id), :class => "btn btn-info btn-large disabled"
 					- else
 						%h3.font.black_font
-							= link_to "Zopakovat otázku", :back, :class => "btn btn-info btn-large"
+							= link_to "Zopakovat otázku", task_recap_user_task_path(@user.id, task.id), :class => "btn btn-info btn-large"
 
 .back_and_remove
 	.back

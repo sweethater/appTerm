@@ -48,4 +48,13 @@ class TasksController < ApplicationController
 
   end
 
+  def task_again
+
+  end
+
+  def task_recap
+
+  end
+
+
 end

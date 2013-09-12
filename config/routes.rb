@@ -24,6 +24,8 @@ Terminal::Application.routes.draw do
     resources :tasks do
       get 'answer', :on => :member
       get 'reshow', :on => :member
+      get 'task_again', :on => :member
+      get 'task_recap', :on => :member
     end
   end
 
