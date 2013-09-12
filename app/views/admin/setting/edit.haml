@@ -1,0 +1,17 @@
+.container
+	%h2
+		%i.icon-gears
+		Nastavení
+
+= form_for [:admin, @setting], :method => :put do |c|
+	.delete_user.control-group
+		= c.label "Životnost užívatele (v hodinách)"
+		= c.number_field :delete_user_timer
+	.admin_name.control-group
+		= c.label "Administrátorskí meno"
+		= c.text_field :admin_name, :placeholder => "Aktualní jmeno: #{@setting.admin_name}", :autocomplete => "off"
+	.admin_name.control-group
+		= c.label "Administrátorskí heslo"
+		= c.text_field :admin_password, :placeholder => "Aktualní heslo: #{@setting.admin_password}", :autocomplete => "off"
+	.submit.control-group
+		= c.submit "Uprav administrátora", :class => "btn btn-info"

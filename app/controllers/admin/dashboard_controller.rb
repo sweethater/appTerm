@@ -1,6 +1,10 @@
 class Admin::DashboardController < ApplicationController
 
-  http_basic_authenticate_with :name => "admin", :password => "terminal"
+  setting = Setting.find(1)
+  name = setting.admin_name
+  password = setting.admin_password
+
+  http_basic_authenticate_with :name => name, :password => password
 
   layout "admin"
 

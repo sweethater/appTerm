@@ -5,11 +5,9 @@
 	%h3.font.black_font
 		= @program.info
 
-/ = render :partial => "common/back_extended"
-
 .audio.hide
 	%audio{:controls => ""}
-		%source{:src => "/audios/rem.mp3", :type => "audio/mpeg", }
+		%source{:src => "/#{@program.mp3_file_name}", :type => "audio/mpeg", }
 
 .back-btn-extended
 	%table

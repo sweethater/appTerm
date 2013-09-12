@@ -34,6 +34,7 @@ end
 gem 'font-awesome-rails'
 gem 'jquery-rails'
 
+gem "paperclip", "~> 3.0"
 # ActiveAdmin
 # gem 'activeadmin'
 # gem "meta_search",    '>= 1.1.0.pre'

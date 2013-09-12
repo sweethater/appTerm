@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130911213240) do
+ActiveRecord::Schema.define(:version => 20130912163622) do
 
   create_table "answers", :force => true do |t|
     t.text     "answer"
@@ -25,8 +25,20 @@ ActiveRecord::Schema.define(:version => 20130911213240) do
     t.text     "info"
     t.text     "program_task"
     t.boolean  "status"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.string   "mp3_file_name"
+    t.string   "mp3_content_type"
+    t.integer  "mp3_file_size"
+    t.datetime "mp3_updated_at"
+  end
+
+  create_table "settings", :force => true do |t|
+    t.integer  "delete_user_timer"
+    t.string   "admin_name"
+    t.string   "admin_password"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   create_table "tasks", :force => true do |t|

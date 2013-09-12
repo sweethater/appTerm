@@ -48,6 +48,7 @@ Terminal::Application.routes.draw do
     resources :programs do
       resources :tasks
     end
+    resources :setting
   end
 
 

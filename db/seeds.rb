@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+s = Setting.new
+s.delete_user_timer = 24
+s.admin_name = "admin"
+s.admin_password = "terminal"
+s.save

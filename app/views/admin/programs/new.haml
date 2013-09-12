@@ -10,5 +10,7 @@
 	.info.control-group
 		= c.label :info
 		= c.text_area :info, :placeholder => "Informace o programu", :size => "30x5"
+	.mp3.control-group
+		= c.file_field :mp3
 	.submit.control-group
 		= c.submit "Vytvoř program", :class => "btn btn-info"
