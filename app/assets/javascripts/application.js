@@ -21,6 +21,9 @@ $(window).ready(function(){
 });
 
 function TERMINAL_Init(){
+
+	var audio = document.getElementsByTagName("audio")[0];
+
 	$('.name_tooltip').tooltip({ 'trigger':'click',
 								    'title': 'Maximalne 8 znakou',
 									'placement': 'bottom'});
@@ -28,4 +31,18 @@ function TERMINAL_Init(){
 	$('a.disabled').on("click", function (e) {
         e.preventDefault();
     });
+
+    $('button.play').on("click", function (e){
+    	audio.play();
+    	$(this).hide();
+    	$('button.pause').show();
+    });
+
+    $('button.pause').on("click", function (e){
+    	audio.pause();
+    	$(this).hide();
+    	$('button.play').show();
+    });
+
+
 }

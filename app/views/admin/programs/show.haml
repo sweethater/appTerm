@@ -5,3 +5,11 @@
 
 	%h4
 		= @program.info
+	%h3
+		Úkoly:
+
+	%h4
+		%ul
+			- @program.tasks.each do |task|
+				%li
+					= task.name

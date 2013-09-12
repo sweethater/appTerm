@@ -1,0 +1,115 @@
+.container
+	%h2
+		%i.icon-tasks
+		Uprav úkol:
+		= @task.name
+.new_task_form
+	= form_tag [:admin,@task], :method => :put do
+		.name.control-group
+			= label_tag "Jméno"
+			= text_field_tag :name, nil, :autocomplete => "off"
+		.task.control-group
+			.areas
+				.task.control-group
+					= label_tag "Úkol"
+					= text_area_tag :task, nil, :autocomplete => "off"
+			.areas
+				.rec.control-group
+					= label_tag "Motivace"
+					= text_area_tag :rec, nil, :autocomplete => "off"
+		.task.control-group
+			.areas
+				.reverse.control-group
+					= label_tag "Úkol - opak"
+					= text_area_tag :reverse, nil, :autocomplete => "off"
+			.areas
+				.question.control-group
+					= label_tag "Otázka"
+					= text_area_tag :question, nil, :autocomplete => "off"
+
+		%ul.nav.nav-tabs.first
+
+		.goodbad.control-group
+			.areas
+				.reverse.control-group
+					= label_tag "Dobrá odpověď"
+					= text_area_tag :good, nil, :autocomplete => "off"
+			.areas
+				.question.control-group
+					= label_tag "Zlá odpověď"
+					= text_area_tag :bad, nil, :autocomplete => "off"
+
+		%ul.nav.nav-tabs.second
+
+		.tooltip-and-answers
+			.tooltips
+				%ul#myTab.nav.nav-tabs.hide
+					%li.active
+						%a{:href => "#home"} Home
+					%li
+						%a{:href => "#profile"} Profile
+					%li
+						%a{:href => "#messages"} Messages
+
+				.tab-content
+					#home.tab-pane.active
+						.header
+							Zadej odpověď:
+						.info
+							Je možní zadat následující regulární výrazy:
+						%ul
+							%li
+								= "==300  :užívatel musí zadat přesnou hodnotu 300"
+							%li
+								= ">>300  :užívatel musí zadat větší hodnotu než 300"
+							%li
+								= "<<300  :užívatel musí zadat menší hodnotu než 300"
+							%li
+								= "+-50:300  :užívatel musí zadat hodnotu v intervalu 50 hodnoty 300"
+					#profile.tab-pane
+						.header
+							Ano / Ne odpověd:
+						.info
+							Je treba zadat obě hodnoty (Ano / Ne).
+						.info
+							Správnou odpověď je třeba zadat do prvního pole, nesprávnou do druhého pole
+
+					#messages.tab-pane
+						.header
+							Blok odpovedí:
+						.info
+							Je treba zadat aspoň tri hodnoty.
+						.info
+							Správnou odpověď je třeba zadat do prvního pole, nesprávné odpovědi do ostatních polí.
+						.info
+							Odpovědi budou uživatelé při zadání otázky zamíchány.
+
+			.answers
+
+				.answer.answer1.control-group
+					= label_tag "Odpověď 1 - Správna odpověď"
+					= text_field_tag :answer1, nil, :autocomplete => "off"
+
+				.answer.answer2.control-group.hide
+					= label_tag "Odpověď 2"
+					= text_field_tag :answer2, nil, :autocomplete => "off"
+
+				.answer.answer3.control-group.hide
+					= label_tag "Odpověď 3"
+					= text_field_tag :answer3, nil, :autocomplete => "off"
+
+				.answer.answer4.control-group.hide
+					= label_tag "Odpověď 4"
+					= text_field_tag :answer4, nil, :autocomplete => "off"
+
+				.answer.answer5.control-group.hide
+					= label_tag "Odpověď 5"
+					= text_field_tag :answer5, nil, :autocomplete => "off"
+
+				.add_answer_button
+					= button_tag :type => "button", :class => "btn btn-success add_answer" do
+						Pridaj odpoveď
+
+
+				.submit.control-group
+					= submit_tag "Uprav úkol", :class => "btn btn-info submit"

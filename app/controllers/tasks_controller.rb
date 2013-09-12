@@ -8,7 +8,7 @@ class TasksController < ApplicationController
 
     @tasks_count = @program.tasks.count
     @current_task_number = @user.last_task_number + 1
-    #binding.pry
+
     @task.task_answers.shuffle!
   end
 
@@ -20,7 +20,7 @@ class TasksController < ApplicationController
     @user.task_percentage[@program.tasks.index(@task)] = nil
     @user.last_task_number = @program.tasks.index(@task)
     @user.save
-    #binding.pry
+
     redirect_to user_task_path(@user.id, @task.id)
 
   end
@@ -49,16 +49,15 @@ class TasksController < ApplicationController
       end
 
     when 2
-      if params[:user_answer].to_i == @task.question_answer.to_i
+      if @task.regexp_answer(params[:user_answer].to_i)
         @user.task_percentage[@user.last_task_number] = true
       else
         @user.task_percentage[@user.last_task_number] = false
       end
+
     end
 
     @user.save
-
-    #binding.pry
 
   end
 

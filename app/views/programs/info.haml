@@ -7,6 +7,10 @@
 
 / = render :partial => "common/back_extended"
 
+.audio.hide
+	%audio{:controls => ""}
+		%source{:src => "/audios/rem.mp3", :type => "audio/mpeg", }
+
 .back-btn-extended
 	%table
 		%tbody
@@ -15,8 +19,10 @@
 					= link_to "Zpět", :back, :class => "btn btn-warning btn-xlarge"
 
 				%td.play-track-btn
-					= link_to :back, :class => "btn btn-info btn-xlarge" do
-						%i.icon-volume-up.icon-white.icon-large
+					= button_tag nil, :class => "btn btn-info btn-xlarge play" do
+						%i.icon-play.icon-white.icon-large
+					= button_tag nil, :class => "btn btn-info btn-xlarge pause hide" do
+						%i.icon-pause.icon-white.icon-large
 
 				%td.ok-btn
 					- if @user.program_status

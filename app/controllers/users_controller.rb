@@ -59,26 +59,17 @@ class UsersController < ApplicationController
   end
 
   def show_info
-    @user = User.find_by_name(params[:name])
-    if @user.program_id
-      @user_program = Program.find(@user.program_id)
-      # @user_program = []
-      # @user_program << Program.find(@user.program_id)
-      if @user
-        # @user_programs = []
-        # programs = Program.all
-        # programs.each do |program|
-        #   program.users.each do |u|
-        #     if u == @user.name
-        #       @user_programs << program
-        #     end
-        #   end
-        # end
-      else
-        redirect_to info_users_path
-      end
+    #binding.pry
+    if params[:name] == ""
+      redirect_to search_users_path
     else
-      redirect_to user_programs_path(@user.id)
+      @user = User.find_by_name(params[:name])
+      if @user.program_id
+        @user_program = Program.find(@user.program_id)
+
+      else
+        redirect_to user_programs_path(@user.id)
+      end
     end
   end
 
