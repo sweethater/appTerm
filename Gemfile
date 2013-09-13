@@ -26,10 +26,10 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
 end
 
-group :development do
-  gem 'pry'
-  gem 'pry-debugger'
-end
+# group :development do
+#   gem 'pry'
+#   gem 'pry-debugger'
+# end
 
 gem 'font-awesome-rails'
 gem 'jquery-rails'
