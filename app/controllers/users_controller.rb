@@ -61,7 +61,7 @@ class UsersController < ApplicationController
   def show_info
 
     if params[:name] == ""
-      redirect_to search_users_path
+      redirect_to info_users_path
     else
       @user = User.find_by_name(params[:name])
       if @user
