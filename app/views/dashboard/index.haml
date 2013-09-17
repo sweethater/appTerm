@@ -1,19 +1,19 @@
 .row-fluid
-	.span4.offset4
-		= link_to new_user_path, :class => "btn btn-xlarge btn-primary btn-block btn-dashboard first" do
-			%i.icon-star.icon-white
-			Nový Užívatel
+  .span4.offset4
+    = link_to new_user_path, :class => "btn btn-xlarge btn-primary btn-block btn-dashboard first" do
+      %i.icon-star.icon-white
+      = t('new_user')
 
 
 .row-fluid
-	.span4.offset4
-		= link_to search_users_path, :class => "btn btn-xlarge btn-primary btn-block btn-dashboard second" do
-			%i.icon-rocket.icon-white
-			Pokračovat v misi
+  .span4.offset4
+    = link_to search_users_path, :class => "btn btn-xlarge btn-primary btn-block btn-dashboard second" do
+      %i.icon-rocket.icon-white
+      = t('continue_in_mission')
 
 
 .row-fluid
-	.span6.offset3
-		= link_to info_users_path, :class => "btn btn-xlarge btn-primary btn-block btn-dashboard third" do
-			%i.icon-globe.icon-white
-			Informace o mém programu
+  .span6.offset3
+    = link_to info_users_path, :class => "btn btn-xlarge btn-primary btn-block btn-dashboard third" do
+      %i.icon-globe.icon-white
+      = t('info')

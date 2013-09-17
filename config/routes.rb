@@ -6,6 +6,10 @@ Terminal::Application.routes.draw do
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
 
+  resources :dashboard do
+    get 'index', :on => :collection
+    get 'set_locale', :on => :collection
+  end
   resources :users do
     #match 'user/find' => 'users#find', :on => :member
 
@@ -95,7 +99,7 @@ Terminal::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'dashboard#index'
+  root :to => 'dashboard#locales'
 
   # See how all your routes lay out with "rake routes"
 
