@@ -7,7 +7,6 @@ Terminal::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
 
   resources :dashboard do
-    get 'index', :on => :collection
     get 'set_locale', :on => :collection
   end
   resources :users do

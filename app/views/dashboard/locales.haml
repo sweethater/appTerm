@@ -1,5 +1,9 @@
-.czech
-  = link_to t('Czech'), set_locale_dashboard_index_path(:locale => :cs)
-.english
-  = link_to t('English'), set_locale_dashboard_index_path(:locale => :en)
+%center
+	.flags-container
+		.cz
+			= link_to set_locale_dashboard_index_path(:locale => :cs) do
+				= image_tag 'cz-flag.jpg', :class => "flag"
+		.en
+			= link_to set_locale_dashboard_index_path(:locale => :en) do
+				= image_tag 'uk-flag.png', :class => "flag"
 

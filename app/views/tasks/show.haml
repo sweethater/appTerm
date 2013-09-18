@@ -1,5 +1,7 @@
 %h3.font.black_font.header
-	= "#{@current_task_number}. úkol z #{@tasks_count}."
+	= "#{@current_task_number}."
+	= t('of_tasks')
+	= "#{@tasks_count}."
 %h1.font.black_font
 	= @program.name
 
@@ -16,8 +18,8 @@
 		- case @task.question_type
 		- when 0
 			.yesno-buttons
-				= link_to "Ano", answer_user_task_path(@user.id, @task.id, :value => "Ano"), :class => "btn btn-primary btn-large first"
-				= link_to "Ne", answer_user_task_path(@user.id, @task.id, :value => "Ne"), :class => "btn btn-primary btn-large second"
+				= link_to t('yes'), answer_user_task_path(@user.id, @task.id, :value => "Ano"), :class => "btn btn-primary btn-large first"
+				= link_to t('no'), answer_user_task_path(@user.id, @task.id, :value => "Ne"), :class => "btn btn-primary btn-large second"
 
 		- when 1
 			.block-buttons
@@ -54,4 +56,4 @@
 					.name.control-group
 						= text_field_tag :user_answer, nil, :class => "search-query font-bold", :autocomplete => "off"
 					.submit.control-group
-						= submit_tag "Odpovedať",:class => "btn btn-success btn-large font-bold"
+						= submit_tag t('answer'),:class => "btn btn-success btn-large font-bold"

@@ -14,7 +14,7 @@
 		%tbody
 			%tr
 				%td.back-btn2
-					= link_to "Zpět", :back, :class => "btn btn-warning btn-xlarge font"
+					= link_to t('back'), :back, :class => "btn btn-warning btn-xlarge font"
 
 				%td.play-track-btn
 					= button_tag nil, :class => "btn btn-info btn-xlarge play" do
@@ -24,6 +24,6 @@
 
 				%td.ok-btn
 					- if @user.program_status
-						= link_to "Pokračovat", task_user_program_path(@user.id, @program.id), :class => "btn btn-success btn-xlarge font"
+						= link_to t('continue'), task_user_program_path(@user.id, @program.id), :class => "btn btn-success btn-xlarge font"
 					- else
-						= link_to "Začít", begin_program_user_program_path(@user.id, @program.id), :class => "btn btn-success btn-xlarge font"
+						= link_to t('begin'), begin_program_user_program_path(@user.id, @program.id), :class => "btn btn-success btn-xlarge font"

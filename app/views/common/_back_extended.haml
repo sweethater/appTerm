@@ -4,12 +4,12 @@
 		%tbody
 			%tr
 				%td.back-btn2
-					= link_to "Zpět", :back, :class => "btn btn-warning btn-xlarge"
+					= link_to t('back'), :back, :class => "btn btn-warning btn-xlarge"
 
 				%td.play-track-btn
 					= link_to :back, :class => "btn btn-info btn-xlarge" do
 						%i.icon-volume-up.icon-white.icon-large
 
 				%td.ok-btn
-					= link_to "OK", task_user_program_path(@user.id, @program.id), :class => "btn btn-success btn-xlarge"
+					= link_to t('continue'), task_user_program_path(@user.id, @program.id), :class => "btn btn-success btn-xlarge"
 

@@ -1,6 +1,25 @@
 en:
-  Czech: Czech
-  English: English
-  new_user: New User
-  continue_in_mission: Continue in mission
-  info: Information about my program
+  Czech: "Czech"
+  English: "English"
+  new_user: "New User"
+  continue_in_mission: "Continue in mission"
+  info_about_my_program: "Information about my program"
+  choose_program: "Choose program"
+  continue: "Continue"
+  begin: "Begin"
+  info: "Info"
+  back: "Back"
+  of_tasks: " task of "
+  again: "again ?"
+  repeat_the_question: "Repeat the question"
+  delete_program: "Delete program"
+  choose_name: "Choose Name"
+  create_user: "Create User"
+  statistic: "Statistic"
+  yes: "Yes"
+  no: "No"
+  answer: "Answer"
+  enter_your_name: "Enter your name"
+  find_user: "Find user"
+  my_info: "My info"
+  user_has_no_program: "User has no program"

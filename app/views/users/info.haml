@@ -2,14 +2,14 @@
 	.span6.offset3
 		%center
 			%h1.font-center
-				Zadaj své jméno:
+				= t('enter_your_name')
 
 	.span6.offset3
 		= form_tag show_info_users_path, :method => 'get' do
 			.name.control-group
 				= text_field_tag 'name', nil, :class => "user_name_field", :autocomplete => "off"
 			.submit.control-group
-				= submit_tag "Najdi uživatele",:class => "btn btn-success btn-xlarge create_user_button"
+				= submit_tag t('find_user'),:class => "btn btn-success btn-xlarge create_user_button"
 
 	.span6.offset3
-		= link_to "Spátky", root_path, :class => "btn btn-xlarge btn-primary btn-back-large"
+		= link_to t('back'), dashboard_index_path, :class => "btn btn-xlarge btn-primary btn-back-large"

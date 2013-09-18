@@ -1,10 +1,10 @@
 
 %h1.font.black_font
-	Zvol program:
+	= t('choose_program')
 
 - if @user_program.nil?
 	%h1.font.black_font
-		Užívatel nemá žáden program
+		= t('user_has_no_program')
 
 - else
 	%table.table.info_table
@@ -19,9 +19,9 @@
 					%h2
 						= @user_program.name
 				%td.action1
-					= link_to "Mé info", user_info_user_program_path(@user.id, @user_program.id), :class => "btn btn-primary btn-xlarge"
+					= link_to t('my_info'), user_info_user_program_path(@user.id, @user_program.id), :class => "btn btn-primary btn-xlarge"
 
 .back-btn
-	= link_to "Zpět", info_users_path, :class => "btn btn-warning btn-xlarge font"
+	= link_to t('back'), dashboard_index_path, :class => "btn btn-warning btn-xlarge font"
 
 

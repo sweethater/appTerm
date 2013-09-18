@@ -1,6 +1,6 @@
 
 %h1.font.black_font
-	Zvol program:
+	= t('choose_program')
 
 %table.table.programs
 	%thead
@@ -19,16 +19,16 @@
 					- if @user.program_status
 						/ - if @user_readed[@user.last_task_number] == false
 
-						= link_to "Dále", task_user_program_path(@user.id, program.id), :class => "btn btn-danger btn-xlarge"
+						= link_to t('continue'), task_user_program_path(@user.id, program.id), :class => "btn btn-danger btn-xlarge"
 
 						/ - else
 						/ 	= link_to "Dále", user_task_path(@user.id, program.id), :class => "btn btn-danger btn-xlarge"
 
 					- else
-						= link_to "Začít", begin_program_user_program_path(@user.id, program.id), :class => "btn btn-success btn-xlarge"
+						= link_to t('begin'), begin_program_user_program_path(@user.id, program.id), :class => "btn btn-success btn-xlarge"
 				%td.action2
-					= link_to "Info", info_user_program_path(@user.id, program), :class => "btn btn-primary btn-xlarge"
+					= link_to t('info'), info_user_program_path(@user.id, program), :class => "btn btn-primary btn-xlarge"
 
-/ = render :partial => "common/back"
+
 .back-btn
-	= link_to "Zpět", root_path, :class => "btn btn-warning btn-xlarge font"
+	= link_to t('back'), dashboard_index_path, :class => "btn btn-warning btn-xlarge font"

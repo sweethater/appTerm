@@ -65,7 +65,8 @@ class ProgramsController < ApplicationController
 
     @user.save
 
-    redirect_to user_programs_path(@user.id)
+    #redirect_to user_programs_path(@user.id)
+    redirect_to root_path
   end
 
 

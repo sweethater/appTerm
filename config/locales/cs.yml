@@ -1,6 +1,25 @@
 cs:
-  Czech: Cesky
-  English: Anglicky
-  new_user: Nový Užívatel
-  continue_in_mission: Pokračovat v misi
-  info: Informace o mém programu
+  Czech: "Česky"
+  English: "Anglicky"
+  new_user: "Nový Užívatel"
+  continue_in_mission: "Pokračovat v misi"
+  info_about_my_program: "Informace o mém programu"
+  choose_program: "Zvol program"
+  continue: "Dále"
+  begin: "Začít"
+  info: "Info"
+  back: "Zpět"
+  of_tasks: " úkol z "
+  again: "Znovu ?"
+  repeat_the_question: "Zopakovat otázku"
+  delete_program: "Zmazat program"
+  choose_name: "Zvol si jméno"
+  create_user: "Vytvor uživatele"
+  statistic: "Statistika"
+  yes: "Ano"
+  no: "Ne"
+  answer: "Odpovedať"
+  enter_your_name: "Zadaj své jméno"
+  find_user: "Najdi uživatele"
+  my_info: "Mé info"
+  user_has_no_program: "Užívatel nemá žáden program"

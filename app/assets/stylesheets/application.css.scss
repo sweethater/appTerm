@@ -294,3 +294,17 @@ table.user_info_table {
 		right: 30px;
 	}
 }
+
+.flags-container{
+	margin-top: 170px;
+	.cz,
+	.en {
+		display: inline;
+	}
+	.cz {
+		padding-right: 70px;
+	}
+	.en {
+		padding-left: 70px;
+	}
+}

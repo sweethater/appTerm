@@ -1,5 +1,5 @@
 %h1.font.black_font
-	Informace o mém programu
+	= t('info_about_my_program')
 
 %table.table.user_info_table
 
@@ -13,7 +13,7 @@
 					/ - if @user.task_percentage[i] == false
 					- if !@user.task_percentage.include?(nil) and @user.task_percentage[i] == false
 						%h3.font.black_font
-							= link_to "Znovu?", task_again_user_task_path(@user.id, task.id), :class => "btn btn-large"
+							= link_to t('again'), task_again_user_task_path(@user.id, task.id), :class => "btn btn-large"
 				%td.action2
 					- if @user.task_percentage[i]
 						%i.icon-ok.icon-2x
@@ -26,15 +26,15 @@
 					/ - if @user.task_percentage[i] == nil
 					- if @user.task_percentage.include?(nil)
 						%h3.font.black_font
-							= link_to "Zopakovat otázku", task_recap_user_task_path(@user.id, task.id), :class => "btn btn-info btn-large disabled"
+							= link_to t('repeat_the_question'), task_recap_user_task_path(@user.id, task.id), :class => "btn btn-info btn-large disabled"
 					- else
 						%h3.font.black_font
-							= link_to "Zopakovat otázku", task_recap_user_task_path(@user.id, task.id), :class => "btn btn-info btn-large"
+							= link_to t('repeat_the_question'), task_recap_user_task_path(@user.id, task.id), :class => "btn btn-info btn-large"
 
 .back_and_remove
 	.back
-		= link_to root_path, :class => 'btn btn-warning btn-xlarge' do
-			Zpět
+		= link_to dashboard_index_path, :class => 'btn btn-warning btn-xlarge' do
+			= t('back')
 	.remove
 		= link_to user_program_path(@user.id, @program.id), :method => :delete, :class => 'btn btn-danger btn-xlarge' do
-			Zmazat program
+			= t('delete_program')
