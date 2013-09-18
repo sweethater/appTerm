@@ -38,7 +38,6 @@ function TERMINAL_Init(){
     $('.name_tooltip').tooltip({ 'trigger':'click',
                                 'title': tooltip_title,
                                 'placement': 'bottom'});
-    console.log(tooltip_title);
 
 	$('a.disabled').on("click", function (e) {
         e.preventDefault();
