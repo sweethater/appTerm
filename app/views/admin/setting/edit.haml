@@ -4,9 +4,7 @@
 		Nastavení
 
 = form_for [:admin, @setting], :method => :put do |c|
-	.delete_user.control-group
-		= c.label "Životnost užívatele (v hodinách)"
-		= c.number_field :delete_user_timer
+
 	.admin_name.control-group
 		= c.label "Administrátorskí meno"
 		= c.text_field :admin_name, :placeholder => "Aktualní jmeno: #{@setting.admin_name}", :autocomplete => "off"
