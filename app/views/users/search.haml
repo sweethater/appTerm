@@ -5,6 +5,9 @@
 				= t('enter_your_name')
 
 	.span6.offset3
+		= render :partial => "common/flash", :locals => { :flash => flash }
+
+	.span6.offset3
 		= form_tag find_users_path, :method => 'get' do
 			.name.control-group
 				= text_field_tag 'name', nil, :class => "user_name_field", :autocomplete => "off"

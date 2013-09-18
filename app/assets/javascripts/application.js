@@ -22,11 +22,23 @@ $(window).ready(function(){
 
 function TERMINAL_Init(){
 
+    // if ($('.user_name_field').lenght > 0 ){
+    //     var locale = window.location.search.slice(-2);
+    // }
+    var locale = window.location.search.slice(-2);
+
 	var audio = document.getElementsByTagName("audio")[0];
 
-	$('.name_tooltip').tooltip({ 'trigger':'click',
-								    'title': 'Maximalne 8 znakou',
-									'placement': 'bottom'});
+    if (locale == "en"){
+        var tooltip_title = 'Min. 2 characters\nMax. 8 characters';
+    } else {
+        var tooltip_title = 'Min. 2 znakou\nMax. 8 znakou';
+    }
+
+    $('.name_tooltip').tooltip({ 'trigger':'click',
+                                'title': tooltip_title,
+                                'placement': 'bottom'});
+    console.log(tooltip_title);
 
 	$('a.disabled').on("click", function (e) {
         e.preventDefault();

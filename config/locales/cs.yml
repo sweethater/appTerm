@@ -23,3 +23,6 @@ cs:
   find_user: "Najdi uživatele"
   my_info: "Mé info"
   user_has_no_program: "Užívatel nemá žádný program"
+  invalid_name: "Neplatné jméno"
+  name_exists: "Jméno existuje"
+  name_dont_exists: "Jméno neexistuje"

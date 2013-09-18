@@ -98,7 +98,7 @@ body {
 	margin-top: 70px;
 	height:70px !important;
 	font-size: 50px !important;
-	width: 350px;
+	width: 362px;
 }
 
 .create_user_button{
@@ -115,7 +115,7 @@ body {
 .tooltip-inner {
 	width: 150px;
 	height: 50px;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 table.programs {
@@ -310,4 +310,16 @@ center.language{
 	.en {
 		padding-left: 70px;
 	}
+}
+
+.flash-msg.alert.alert-error {
+	position: absolute;
+	text-align: center;
+	width: 325px;
+	font-size: 26px
+}
+
+.localization {
+	position: absolute;
+	bottom: 26px;
 }

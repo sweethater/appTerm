@@ -4,7 +4,6 @@ namespace :user_delete_jobs do
 	task :user_delete_jobs => :environment do
 		@users = User.all
 		@users.each {|user| user.destroy}
-
 	end
 
 

@@ -5,6 +5,9 @@
 				= t('choose_name')
 
 	.span6.offset3
+		= render :partial => "common/flash", :locals => { :flash => flash }
+
+	.span6.offset3
 		= form_for @user do |u|
 			.name.control-group
 				= u.text_field :name, :class => "user_name_field name_tooltip", :autocomplete => "off"

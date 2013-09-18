@@ -7,15 +7,16 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
-    if @user.save
-      flash[:success] = 'ok'
-      redirect_to user_programs_path(@user.id)
+    if User.find_by_name(params[:user][:name])
+      redirect_to new_user_path, :flash => { :error => t('name_exists') }
     else
-      flash[:error] = 'dp'
-      redirect_to new_user_path
+      @user = User.new(params[:user])
+      if @user.save
+        redirect_to user_programs_path(@user.id)
+      else
+        redirect_to new_user_path, :flash => { :error => t('invalid_name') }
+      end
     end
-    #binding.pry
 
   end
 
@@ -50,7 +51,7 @@ class UsersController < ApplicationController
       end
 
     else
-      redirect_to search_users_path
+      redirect_to search_users_path, :flash => { :error => t('name_dont_exists') }
     end
   end
 
@@ -61,7 +62,7 @@ class UsersController < ApplicationController
   def show_info
 
     if params[:name] == ""
-      redirect_to info_users_path
+      redirect_to info_users_path, :flash => { :error => t('invalid_name')}
     else
       @user = User.find_by_name(params[:name])
       if @user
@@ -72,7 +73,7 @@ class UsersController < ApplicationController
           redirect_to user_programs_path(@user.id)
         end
       else
-        redirect_to search_users_path
+        redirect_to search_users_path, :flash => { :error => t('name_dont_exists')}
       end
     end
   end
