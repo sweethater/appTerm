@@ -12,11 +12,11 @@
 	%thead
 		%tr
 			%th.name
-				Meno
+				Jméno
 			%th.program
-				Aktualny program
+				Aktuální program
 			%th.action
-				Akcie
+				Akce
 	%tbody
 		- @users.each do |user|
 			%tr
@@ -30,10 +30,10 @@
 				%td.action
 					= link_to admin_user_path(user.id), :class => "show_link" do
 						%i.icon-info
-						pozri
+						náhled
 					= link_to edit_admin_user_path(user.id), :class => "edit_link"  do
 						%i.icon-edit
 						upravit
-					= link_to admin_user_path(user.id), :confirm => "Zmazat úkol #{user.name} ?", :method => :delete, :class => "delete_link" do
+					= link_to admin_user_path(user.id), :confirm => "Smazat úkol #{user.name} ?", :method => :delete, :class => "delete_link" do
 						%i.icon-trash
-						zmazat
+						smazat

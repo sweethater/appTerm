@@ -12,11 +12,11 @@
 	%thead
 		%tr
 			%th.program-name
-				Meno
+				Jméno
 			%th.tasks
 				Úkolú
 			%th.program-action
-				Akcie
+				Akce
 	%tbody
 		- @programs.each do |program|
 			%tr
@@ -35,10 +35,10 @@
 						přidat úkol
 					= link_to admin_program_path(program.id), :class => "show_link" do
 						%i.icon-info
-						pozri
+						náhled
 					= link_to edit_admin_program_path(program.id), :class => "edit_link" do
 						%i.icon-edit
-						upravit
+						edit
 					= link_to admin_program_path(program.id), :confirm => "Zmazat úkol #{program.name} ?", :method => :delete, :class => "delete_link" do
 						%i.icon-trash
-						zmazat
+						smazat

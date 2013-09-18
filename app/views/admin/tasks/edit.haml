@@ -36,7 +36,7 @@
 					= text_area_tag :good, nil, :autocomplete => "off"
 			.areas
 				.question.control-group
-					= label_tag "Zlá odpověď"
+					= label_tag "Špatná odpověď"
 					= text_area_tag :bad, nil, :autocomplete => "off"
 
 		%ul.nav.nav-tabs.second
@@ -59,18 +59,18 @@
 							Je možní zadat následující regulární výrazy:
 						%ul
 							%li
-								= "==300  :užívatel musí zadat přesnou hodnotu 300"
+								= "==300  :uživatel musí zadat přesnou hodnotu 300"
 							%li
-								= ">>300  :užívatel musí zadat větší hodnotu než 300"
+								= ">>300  :uživatel musí zadat větší hodnotu než 300"
 							%li
-								= "<<300  :užívatel musí zadat menší hodnotu než 300"
+								= "<<300  :uživatel musí zadat menší hodnotu než 300"
 							%li
-								= "+-50:300  :užívatel musí zadat hodnotu v intervalu 50 hodnoty 300"
+								= "+-50:300  :uživatel musí zadat hodnotu v intervalu +-50 hodnoty 300"
 					#profile.tab-pane
 						.header
 							Ano / Ne odpověd:
 						.info
-							Je treba zadat obě hodnoty (Ano / Ne).
+							Je nutno zadat obě hodnoty (Ano / Ne).
 						.info
 							Správnou odpověď je třeba zadat do prvního pole, nesprávnou do druhého pole
 
@@ -82,12 +82,12 @@
 						.info
 							Správnou odpověď je třeba zadat do prvního pole, nesprávné odpovědi do ostatních polí.
 						.info
-							Odpovědi budou uživatelé při zadání otázky zamíchány.
+							Odpovědi budou uživateli při zadání otázky zamíchány.
 
 			.answers
 
 				.answer.answer1.control-group
-					= label_tag "Odpověď 1 - Správna odpověď"
+					= label_tag "Odpověď 1 - Správná odpověď"
 					= text_field_tag :answer1, nil, :autocomplete => "off"
 
 				.answer.answer2.control-group.hide
@@ -108,7 +108,7 @@
 
 				.add_answer_button
 					= button_tag :type => "button", :class => "btn btn-success add_answer" do
-						Pridaj odpoveď
+						Přidej odpoveď
 
 
 				.submit.control-group
