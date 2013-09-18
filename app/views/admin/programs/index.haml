@@ -14,14 +14,19 @@
 			%th.program-name
 				Meno
 			%th.tasks
-				Počet úkolú
+				Úkolú
 			%th.program-action
 				Akcie
 	%tbody
 		- @programs.each do |program|
 			%tr
 				%td.program-name
+					- if program.language == "cs"
+						= image_tag "cz-flag-mini.jpg"
+					- if program.language == "en"
+						= image_tag "uk-flag-mini.png"
 					= program.name
+
 				%td.tasks
 					= program.tasks.count
 				%td.program-action

@@ -1,5 +1,7 @@
 class Program < ActiveRecord::Base
-  attr_accessible :info, :name, :program_task, :status, :mp3
+  attr_accessible :info, :name, :program_task, :status, :mp3, :language
+
+  LOCALIZATION = %w(cs en)
 
   has_attached_file :mp3,
                     :url => ":rails_root/public/:filename",

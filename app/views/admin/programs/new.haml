@@ -7,6 +7,9 @@
 	.name.control-group
 		= c.label "Jmeno"
 		= c.text_field :name, :placeholder => "Jméno programu", :autocomplete => "off"
+	.language.control-group
+		= c.label "Jazyk"
+		= c.select :language, Program::LOCALIZATION
 	.info.control-group
 		= c.label :info
 		= c.text_area :info, :placeholder => "Informace o programu", :size => "30x5", :autocomplete => "off"

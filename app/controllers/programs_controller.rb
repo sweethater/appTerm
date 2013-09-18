@@ -2,6 +2,7 @@ class ProgramsController < ApplicationController
 
   def index
     @programs = Program.all.reject {|p| p.tasks.count == 0 }
+    @programs.keep_if{|p| p.language == I18n.locale.to_s}
     @user = User.find(params[:user_id])
 
     unless @user.program_id.nil?
