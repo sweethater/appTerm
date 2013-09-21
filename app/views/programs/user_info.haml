@@ -31,7 +31,7 @@
 						%h3.font.black_font
 							= link_to t('repeat_the_question'), task_recap_user_task_path(@user.id, task.id), :class => "btn btn-info btn-large"
 
-.back_and_remove
+.back_and_remove.font-bold
 	.back
 		= link_to dashboard_index_path, :class => 'btn btn-warning btn-xlarge' do
 			= t('back')
