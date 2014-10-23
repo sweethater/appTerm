@@ -1,0 +1,60 @@
+﻿Mise let na Měsíc
+Infoblok:
+Měsíc jako náš nejbližší vesmírný souputník dlouho odolával vkročení lidstva na jeho povrch. Tato mise tě provede stejnou cestou, jako měli v roce 1969 astronauti mise Apollo. Splnění celé mise ti zabere kolem 30 min.  Jelikož se úkoly mise plní v horním i dolní části budovy, využívej obou terminálů, ať přecházíš mezi patry co nejméně.
+Blok zadání úkolu 1.- Historické exponáty:
+1. Každý astronaut by měl pro případ nouze znát základní navigaci, kterou používali již naši předkové. Jdi do dolní části expozice a najdi exponát s velkou lodí. Zde pomocí sextantu změř úhlový rozestup mezi dvěma hvězdami.označenou hvědou a horizontem.  Poté se vrať zpátky k terminálu a zadej naměřenou hodnotu. Toleranci máš 5 úhlových stupňů.
+Blok odpověď zadej:
+Kolik úhlových stupňů jsi naměřil?
+Blok odpověď welldone:
+Skvělé, jsi v toleranci. Sextant se používal v  XVIII.XX. Sstoletí přiro dlouhých plavbách. Námořníci tehdy ještě neměli systém GPS, proto svou polohu určovali pomocí Slunce a dalších hvězd.
+Blok odpověď sorry:
+Bohužel, jsi mimo toleranci. Sextant se používal v  XVIII:X. S století pro při dlouhých plavbách. Námořníci tehdy ještě neměli systém GPS, proto svou polohu určovali pomocí Slunce a dalších hvězd.
+Blok zadání úkolu 2. – Fáze Měsíce:
+2. Potřebujeme prozkoumat střední část povrchu Měsíce, je proto důležité vědět něco o jeho fázích. V dolní části expozice najdi exponát Fáze Měsíce a zjisti, v jaký den je vhodné přistát přibližně ve středu měsíčního disku viditelného od Země, tak aby tam bylo světlo dalších 5 dní trvání mise.
+Blok odpověď zadej:
+Kolikátý den měsíčního cyklu je vhodné přistát?
+Blok odpověď welldone:
+Skvělé, jsi v toleranci. Ve dnech X až X je vhodné přistát ve středu Měsíce, tak aby tam bylo světlo po celou dobu mise. Například astronauti Apollo 17 strávili na povrchu Měsíce přes tři dny.
+Blok odpověď sorry:
+Skvělé, jsi v toleranci. Ve dnech X až X je vhodné přistát ve středu Měsíce, tak aby tam bylo světlo po celou dobu mise. Například astronauti Apollo 17 strávili na povrchu Měsíce přes tři dny.
+Blok zadání úkolu 3. -  Atmosféra Země:
+3. Jedna z nejtěžších částí výpravy bude ihned po startu, kdy je nutné proletět atmosférou naší Země. V dolní části expozice najdi exponát Atmosféra Země a zjisti, v jaké výšce začne teplota atmosféry opět stoupat. Máš toleranci 2 km.
+Blok odpověď zadej:
+Kolikátý den měsíčního cyklu je vhodné přistát?
+Blok odpověď welldone:
+Skvělé, jsi v toleranci. Ve dnech X až X je vhodné přistát ve středu Měsíce, tak aby tam bylo světlo po celou dobu mise. Například astronauti Apollo 17 strávili na povrchu Měsíce přes tři dny.
+Blok odpověď sorry:
+Skvělé, jsi v toleranci. Ve dnech X až X je vhodné přistát ve středu Měsíce, tak aby tam bylo světlo po celou dobu mise. Například astronauti Apollo 17 strávili na povrchu Měsíce přes tři dny.
+Blok zadání úkolu 4. – Vodíková raketa a Modely sond:
+4. Nyní je čas odstartovat… V suterénu expozice najdi exponát Vodíková raketa, raketu v co nejkratším čase odpal a aby tato část mise nebyla tak jednoduchá, tak najdi u Modelů nosníků raket (nachází se na balkonu) jméno té, která vynesla astronauty na Měsíc. 
+Blok odpověď možnosti:
+Který raketový nosič pomohl dosáhnout astronautům měsíčního povrchu?
+A) V-2
+B) Ariane 1
+C) Saturn V5
+Blok odpověď welldone:
+Skvělé. Astronauté misí Apollo doletěli a přistáli na Měsíci s pomocí raketového nosiče Saturn V5. Jako první vstoupil na měsíční povrch Neil Armstrong 21. července 1969.
+Blok odpověď sorry:
+Bohužel. Astronauté misí Apollo doletěli a přistáli na Měsíci s pomocí raketového nosiče Saturn 5. Jako první vstoupil na měsíční povrch Neil Armstrong 21. července 1969.
+Blok zadání úkolu 5.:
+5. Je potřeba abys v případě nouze dokázal ovládat Měsíční vozítko. Exponát Vozítka se nachází na balkoně, využij vozítko s kamerou pro dálkové ovládání a najdi vzkaz za vysokou horou, který ti astronomové z předchozích misí na Měsíci nechali. 
+Blok odpověď možnosti:
+Jaký vzkaz ti nechali astronauti za vysokou horou?
+A) Je to malý krůček pro člověka, ale velký skok pro lidstvo. N. Armstrong
+B) Jen dvě věci jsou nekonečné. Vesmír a lidská hloupost. A to si ještě nejsem jistý tím prvním. A. Einstein
+C) Úvahy o tom, že černá díra emituje částice, nasvědčují, že bůh nejenže v kostky hraje, ale občas je hází i tam, kde je nikdo nemůže vidět. S. Hawking
+Blok odpověď welldone:
+Ano, tento výrok řekl Albert Einstein a určitě je na něm něco pravdy.
+Blok odpověď sorry:
+Ne, tento výrok řekl Albert Einstein a určitě je na něm něco pravdy.
+Blok zadání úkolu 6.:
+6. Vítám tě u posledního úkolu, pokud ses dostal až sem, tak si rozhodně zasloužíš trošku slávy. Na balkoněV přízemí je přistávací kapsle  je exponát se sSkafandrem, tak se vyfotografuj a fotografii si schovej na památku splněné mise Let na Měsíc. 
+Blok odpověď možnosti:
+A) Povedlo se mi vyfotografovat.
+B) Nepovedlo se mi vyfotografovat.
+Blok odpověď welldone:
+Skvělé, ještě jednou gratulujeme ke splnění historické mise Let na Měsíc.
+Blok odpověď sorry:
+Pokud se ti nepodařilo se vyfotografovat, požádej Edutainera ať ti pomůže. Gratulujeme ke splnění mise.
+
+
